@@ -26,9 +26,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_card_view);
+        setContentView(R.layout.activity_main);
 
-        ListView newsListView = findViewById(R.id.list_item);
+        ListView newsListView = findViewById(R.id.myNewsListItem);
         mNoContentTextView = findViewById(R.id.view_empty1);
         newsListView.setEmptyView(mNoContentTextView);
         mAdapter = new MyNewsAdapter(this, new ArrayList<MyNews>());

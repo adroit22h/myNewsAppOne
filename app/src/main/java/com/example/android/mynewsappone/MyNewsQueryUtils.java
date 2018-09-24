@@ -139,7 +139,7 @@ public class MyNewsQueryUtils {
                 newsList.add(news);
             }
 
-        } catch (JSONException e) {
+        } catch (final JSONException e) {
 
             e.printStackTrace();
         }
@@ -147,3 +147,7 @@ public class MyNewsQueryUtils {
         return newsList;
     }
 }
+
+// catch (final Exception e) {
+//        throw new RuntimeException("Error initializing TensorFlow!", e);
+//        }
