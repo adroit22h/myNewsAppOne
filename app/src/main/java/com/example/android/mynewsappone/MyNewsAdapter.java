@@ -26,24 +26,24 @@ public class MyNewsAdapter extends ArrayAdapter<MyNews> {
         MyNews currentNews = getItem(position);
 
         TextView newsArticleTitle = (TextView) listItemView.findViewById(R.id.article_title);
-        String title = currentNews.getmArticleTitle();
+        String title = currentNews.getArticleTitle();
         newsArticleTitle.setText(title);
 
 
         TextView newsArticleSectionName = (TextView) listItemView.findViewById(R.id.article_section_name);
-        String category = currentNews.getmArticleSectionName();
+        String category = currentNews.getArticleSectionName();
         newsArticleSectionName.setText(category);
 
         TextView newsArticlePubdate = (TextView) listItemView.findViewById(R.id.article_pubdate);
-        String date = currentNews.getmArticlePubdate();
+        String date = currentNews.getArticlePubdate();
         newsArticlePubdate.setText(date);
 
         TextView newsArticleAuthorName = (TextView) listItemView.findViewById(R.id.article_author_name);
-        String author = currentNews.getmArticleAuthorName();
+        String author = currentNews.getArticleAuthorName();
         newsArticleAuthorName.setText(author);
 
         TextView newsArticleUrl = (TextView) listItemView.findViewById(R.id.article_url);
-        String url = currentNews.getmArticleUrl();
+        String url = currentNews.getArticleUrl();
         newsArticleUrl.setText(url);
 
         return listItemView;

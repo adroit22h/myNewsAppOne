@@ -22,6 +22,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     private MyNewsAdapter mAdapter;
     private TextView mNoContentTextView;
 
+    /** URL for news data from the Guardian API */
+    private static final String REQUEST_URL =
+            "https://content.guardianapis.com/search?show-tags=contributor&api-key=0bd3322e-7c04-40dd-9395-e9e9064ffc37";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +41,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 MyNews currentNews = mAdapter.getItem(position);
-                Uri newsUri = Uri.parse(currentNews.getmArticleUrl());
+
+                //changed getmArticleUrl to getArticleUrl
+                Uri newsUri = Uri.parse(currentNews.getArticleUrl());
                 Intent websiteIntent = new Intent(Intent.ACTION_VIEW, newsUri);
                 startActivity(websiteIntent);
             }
@@ -59,8 +64,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     }
 
     @Override
-    public Loader<List<MyNews>> onCreateLoader(int id, Bundle args) {
-        return new MyNewsLoader(this);
+    public Loader<List<MyNews>> onCreateLoader(int id, Bundle bundle) {
+        return new MyNewsLoader(this, REQUEST_URL);
     }
 
     @Override
@@ -80,6 +85,3 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         mAdapter.clear();
     }
 }
-
-
-

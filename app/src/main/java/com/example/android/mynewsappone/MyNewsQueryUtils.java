@@ -20,8 +20,6 @@ import java.util.List;
 
 public class MyNewsQueryUtils {
 
-
-
     public static List<MyNews> fetchNewsData(String requestUrl) {
         URL url = createUrl(requestUrl);
 
@@ -62,7 +60,7 @@ public class MyNewsQueryUtils {
             urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setReadTimeout(10000 /* milliseconds */);
             urlConnection.setConnectTimeout(15000 /* milliseconds */);
-          //  urlConnection.setResponseCode(200/*milliseconds */);
+            //  urlConnection.setResponseCode(200/*milliseconds */);
             urlConnection.setRequestMethod("GET");
             urlConnection.connect();
 

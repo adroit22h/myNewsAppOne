@@ -8,35 +8,31 @@ public class MyNews {
     private String mArticleAuthorName;
     private String mArticleUrl;
 
-    public MyNews(String mArticleTitle, String mArticleSectionName, String mArticlePubdate, String mArticleAuthorName, String mArticleUrl) {
-        this.mArticleTitle = mArticleTitle;
-        this.mArticleSectionName = mArticleSectionName;
-        this.mArticlePubdate = mArticlePubdate;
-
-        this.mArticleAuthorName = mArticleAuthorName;
-        this.mArticleUrl = mArticleUrl;
+    public MyNews(String articleTitle, String articleSectionName, String articlePubdate, String articleAuthorName, String articleUrl) {
+        mArticleTitle = articleTitle;
+        mArticleSectionName = articleSectionName;
+        mArticlePubdate = articlePubdate;
+        mArticleAuthorName = articleAuthorName;
+        mArticleUrl = articleUrl;
     }
 
-    public String getmArticleTitle() {
+    public String getArticleTitle() {
         return mArticleTitle;
     }
 
-    public String getmArticleSectionName() {
+    public String getArticleSectionName() {
         return mArticleSectionName;
     }
 
-    public String getmArticlePubdate() {
+    public String getArticlePubdate() {
         return mArticlePubdate;
     }
 
-
-
-    public String getmArticleAuthorName() {
+    public String getArticleAuthorName() {
         return mArticleAuthorName;
     }
 
-    public String getmArticleUrl() {
+    public String getArticleUrl() {
         return mArticleUrl;
     }
-
 }

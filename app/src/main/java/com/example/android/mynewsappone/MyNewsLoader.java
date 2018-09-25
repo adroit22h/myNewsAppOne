@@ -9,12 +9,11 @@ import java.util.List;
 public class MyNewsLoader extends AsyncTaskLoader<List<MyNews>> {
 
 
-    private static String REQUEST_URL =
-           // "http://content.guardianapis.com/search?show-tags=contributor&api-key=test";
-            "https://content.guardianapis.com/search?api-key=0bd3322e-7c04-40dd-9395-e9e9064ffc37";
+    private String mUrl;
 
-    public MyNewsLoader(Context context) {
+    public MyNewsLoader(Context context, String url) {
         super(context);
+        mUrl = url;
     }
 
     @Override
@@ -24,11 +23,11 @@ public class MyNewsLoader extends AsyncTaskLoader<List<MyNews>> {
 
     @Override
     public List<MyNews> loadInBackground() {
-        if (REQUEST_URL == null) {
+        if (mUrl == null) {
             return null;
         }
 
-        List<MyNews> newsList = MyNewsQueryUtils.fetchNewsData(REQUEST_URL);
+        List<MyNews> newsList = MyNewsQueryUtils.fetchNewsData(mUrl);
         return newsList;
     }
 }
