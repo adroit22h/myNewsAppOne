@@ -37,7 +37,7 @@ public class MyNewsAdapter extends ArrayAdapter<MyNews> {
         TextView newsArticlePubdate = (TextView) listItemView.findViewById(R.id.article_pubdate);
         String date = currentNews.getArticlePubdate();
         newsArticlePubdate.setText(date);
-
+//This code ran correctly once...I'm asking for the author name..however the guardian api at times returns the author name instead and vice versa.
         TextView newsArticleAuthorName = (TextView) listItemView.findViewById(R.id.article_author_name);
         String author = currentNews.getArticleAuthorName();
         newsArticleAuthorName.setText(author);
@@ -48,4 +48,6 @@ public class MyNewsAdapter extends ArrayAdapter<MyNews> {
 
         return listItemView;
     }
+
+
 }

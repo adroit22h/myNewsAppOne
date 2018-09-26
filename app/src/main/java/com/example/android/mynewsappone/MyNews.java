@@ -4,7 +4,6 @@ public class MyNews {
     private String mArticleTitle;
     private String mArticleSectionName;
     private String mArticlePubdate;
-
     private String mArticleAuthorName;
     private String mArticleUrl;
 
@@ -35,4 +34,5 @@ public class MyNews {
     public String getArticleUrl() {
         return mArticleUrl;
     }
+
 }

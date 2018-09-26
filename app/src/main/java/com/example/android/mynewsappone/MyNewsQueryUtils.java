@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MyNewsQueryUtils {
-
+//This page pull the tags from the guardian api website
     public static List<MyNews> fetchNewsData(String requestUrl) {
         URL url = createUrl(requestUrl);
 
@@ -132,7 +132,7 @@ public class MyNewsQueryUtils {
                     author = "No Author ..";
                 }
 
-                MyNews news = new MyNews(Title, category, date, url, author);
+                MyNews news = new MyNews(Title, category, date, author, url);
 
                 newsList.add(news);
             }
@@ -146,6 +146,3 @@ public class MyNewsQueryUtils {
     }
 }
 
-// catch (final Exception e) {
-//        throw new RuntimeException("Error initializing TensorFlow!", e);
-//        }
